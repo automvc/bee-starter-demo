@@ -1,12 +1,11 @@
 
 DEMO FOR bee-spring-boot-starter
 =========
-## bee-spring-boot-starter 
-will help you add dependency easily for Bee and Spring boot.  
-bee-spring-boot will help you to use Bee with Spring Boot.   
+**bee-spring-boot-starter** will help you add dependency easily for Bee and Spring boot.  
+**bee-spring-boot** will help you to use Bee with Spring Boot.   
 It is faster development of new combinations for Spring Cloud microservices.   
 This project is demo for this.  
- 
+
 [see bee-spring-boot](../../../bee-springboot)  
 [see bee-spring-boot-starter](../../../bee-spring-boot-starter)  
 
