@@ -1,7 +1,8 @@
 
-bee-spring-boot-starter
+DEMO FOR bee-spring-boot-starter
 =========
 ## 将bee-spring-boot定义为一个starter,快速引入Bee和spring boot的功能! 
+## 此工程为bee-spring-boot-starter的demo工程. 
 
 **Bee** 是一个简单，易用，功能强大，开发速度快，编码少的 JAVA ORM 框架。  
 Bee简单易用：单表操作、多表关联操作，可以不用写sql,极少语句就可以完成SQL操作；**概念简单**,10分钟即可入门。  
