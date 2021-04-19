@@ -16,6 +16,7 @@ https://github.com/automvc/bee
 https://gitee.com/automvc/bee  
 
 **[查看 bee-spring-boot](../../../bee-springboot)**  
+**[查看 bee-spring-boot-starter](../../../bee-spring-boot-starter)** 
 
 快速开始:
 =========	
