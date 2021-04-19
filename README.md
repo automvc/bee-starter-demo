@@ -6,6 +6,7 @@ bee-spring-boot will help you to use Bee with Spring Boot.
 It is faster development of new combinations for Spring Cloud microservices.   
 
 If you want to use the starter directly,please see:  
+[bee-spring-boot](../../../bee-springboot)  
 [bee-spring-boot-starter](../../../bee-spring-boot-starter)  
 
 **Bee** is an easy and high efficiency ORM framework.   
@@ -15,11 +16,6 @@ Latest Version: Bee V1.9 (2021-04)
 https://github.com/automvc/bee  
 or:  
 https://gitee.com/automvc/bee  
-
-
-Quick Start
-=========	
-[bee-starter-demo](../../../bee-starter-demo)  
 
 
 Quick Start:
