@@ -3,21 +3,25 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>bee-starter-demo</artifactId>
-	<version>1.9.0-SNAPSHOT</version>
+<!-- 	<version>1.9.5</version> -->
 
 	<parent>
 		<groupId>org.teasoft</groupId>
 		<artifactId>bee-spring-boot-starter</artifactId>
-		<version>1.9-SNAPSHOT</version>
+<!-- 		<version>1.9.5</version> -->
+		<version>1.9.5.boot2.0.4.RELEASE</version>
 	</parent>
 	
-		<properties>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
+<!-- 		<spring.version>1.5.16.RELEASE</spring.version> -->
+		<spring.version>2.0.4.RELEASE</spring.version>
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>com.automvc</groupId>
 			<artifactId>comm</artifactId>
@@ -57,20 +61,57 @@
 			<version>0.2.15</version>
 		</dependency>
 
-<!-- 		<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-			<version>1.5.16.RELEASE</version>
-		</dependency> -->
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 
 		<!-- if in spring-boot use datasoure,need this dependency -->
+		<!-- 直接使用DriverManager.getConnection获取连接,不用设置 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
-			<version>1.5.16.RELEASE</version>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.47</version>
+			<scope>runtime</scope>
+		</dependency>
+		
+		 <!-- log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.17</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17</version>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

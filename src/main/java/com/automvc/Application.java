@@ -9,7 +9,7 @@ package com.automvc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
+//import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -20,13 +20,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @since  1.9
  */
 @SpringBootApplication
-public class Application extends SpringBootServletInitializer {
+//public class Application extends SpringBootServletInitializer {
+public class Application {
 	
-
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(Application.class);
-	}
+//	@Override
+//	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//		return application.sources(Application.class);
+//	}
 
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(Application.class, args);

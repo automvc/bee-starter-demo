@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.teasoft.honey.osql.core.BeeFactory;
 import org.teasoft.honey.osql.core.HoneyContext;
-import org.teasoft.spring.boot.config.BeeManageConfig;
+//import org.teasoft.spring.boot.config.BeeManageConfig;
 
 import com.alibaba.druid.pool.DruidDataSource;
 
@@ -26,8 +26,8 @@ import com.alibaba.druid.pool.DruidDataSource;
  * @since  1.9
  */
 
-@Configuration
-@AutoConfigureAfter(BeeManageConfig.class)
+//@Configuration   //just use in test more datasource
+//@AutoConfigureAfter(BeeManageConfig.class)   //just use in test more datasource
 public class BeeFactoryBean {
 	
 	public BeeFactoryBean() {
