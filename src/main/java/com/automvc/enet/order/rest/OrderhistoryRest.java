@@ -42,25 +42,6 @@ public class OrderhistoryRest {
 			@RequestParam(value = "rows", defaultValue = "20", required = false) int rows) {
 		Result result = new Result();
 		try {
-			
-			System.err.println(CnNum.tranToUpper(123.143D));
-			
-			System.err.println("测试配置文件中,key不用'-'也可以,但与spring整合的,要用'-'");
-			System.err.println(HoneyConfig.getHoneyConfig().multiDS_type);
-			
-			String fullPath = "D:\\test-dataType.xlsx";
-			String[] checkTitles= {"序号","班级","姓名","离深时间	","目的地","离深交通工具","返深时间","返深交通工具","家长联系电话"};
-			List<String[]> list0 = ExcelReader.readExcel(fullPath);
-			String col[] = null;
-			for (int i = 0; list0!=null && i < list0.size(); i++) {
-				col = list0.get(i);
-				
-				for (int j = 0; j < col.length; j++) {
-					System.out.print(col[j] + "   ");
-				}
-			}
-			System.out.println();
-			
 			int total = objSQLRichService.count(orderhistory);
 			List<Orderhistory> list = objSQLRichService.select(orderhistory, (page - 1) * rows, rows);
 			result.setRows(list);

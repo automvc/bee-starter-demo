@@ -7,6 +7,7 @@
 package com.automvc.autogen;
 
 import org.teasoft.bee.osql.Suid;
+import org.teasoft.honey.distribution.GenIdFactory;
 import org.teasoft.honey.osql.autogen.Ddl;
 import org.teasoft.honey.osql.core.BeeFactoryHelper;
 import org.teasoft.honey.osql.core.Logger;
@@ -22,12 +23,19 @@ public class CreateTableWithJavabean {
 	public static void main(String[] args) {
 		try {
 			
-//			Suid suid=BeeFactoryHelper.getSuid();
+			Suid suid=BeeFactoryHelper.getSuid();
 //			suid.select(new Orderhistory());
 			
 			//直接运行main方法, 配置信息是从bee.properties获取 
             //run the main method directly, the config info get from bee.properties.
 			Ddl.createTable(new Orderhistory(), false); 
+			
+			//test data
+			Orderhistory entity=new Orderhistory();
+			entity.setName("Bee");
+			entity.setOrderNo(GenIdFactory.get()+"");
+			entity.setRemark("test for spring boot");
+			suid.insert(entity);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
