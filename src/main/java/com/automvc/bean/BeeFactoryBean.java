@@ -12,12 +12,11 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
-import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.teasoft.honey.osql.core.BeeFactory;
 import org.teasoft.honey.osql.core.HoneyContext;
 //import org.teasoft.spring.boot.config.BeeManageConfig;
+import org.teasoft.honey.osql.core.Logger;
 
 import com.alibaba.druid.pool.DruidDataSource;
 
@@ -31,7 +30,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 public class BeeFactoryBean {
 	
 	public BeeFactoryBean() {
-		System.err.println("---------------------BeeFactoryBean--构造方法----");
+		Logger.info("---------------------BeeFactoryBean--构造方法----");
 	}
 
 	@Bean

@@ -18,6 +18,7 @@ import org.teasoft.bee.osql.service.ObjSQLService;
 import org.teasoft.beex.poi.ExcelReader;
 import org.teasoft.beex.util.CnNum;
 import org.teasoft.honey.osql.core.HoneyConfig;
+import org.teasoft.honey.osql.core.Logger;
 
 import com.automvc.common.jquery.Result;
 import com.automvc.enet.order.entity.Orderhistory;
@@ -47,10 +48,10 @@ public class OrderhistoryRest {
 			result.setRows(list);
 			result.setTotal(total);
 		} catch (BeeSQLException e) {
-			System.err.println(e.getMessage());
+			Logger.error(e.getMessage(),e);
 			result.setErrorMsg(e.getMessage());
 		}catch (Exception e) {
-			System.err.println(e.getMessage());
+			Logger.error(e.getMessage(),e);
 			result.setErrorMsg(e.getMessage());
 		}
 
