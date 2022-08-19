@@ -12,7 +12,8 @@
 <!--         <version>1.9.8.boot2.4.2</version> -->
 <!--              <version>1.9.8.boot2.0.4</version> -->
 <!--             <version>1.9.8</version> -->
-              <version>1.11</version>
+<!--               <version>1.11</version> -->
+              <version>1.17</version>
 	</parent>
 	
 	<properties>
@@ -82,6 +83,13 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		
+<!-- 		for TranHandler use aop -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${spring.version}</version>
+	    </dependency>
 		
 		<dependency>
 			<groupId>mysql</groupId>
