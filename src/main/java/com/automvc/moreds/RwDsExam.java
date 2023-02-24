@@ -80,21 +80,21 @@ public class RwDsExam {
 
 			DruidDataSource dataSource1;
 			dataSource1 = new DruidDataSource();
-			dataSource1.setUrl("jdbc:mysql://localhost:3306/pro?characterEncoding=UTF-8");
+			dataSource1.setUrl("jdbc:mysql://localhost:3306/pro?characterEncoding=UTF-8&amp;useSSL=false");
 			dataSource1.setUsername("root");
-			dataSource1.setPassword("");
+			dataSource1.setPassword("123456");
 			dataSource1.init();
 
 			DruidDataSource dataSource2;
 			dataSource2 = new DruidDataSource();
-			dataSource2.setUrl("jdbc:mysql://localhost:3306/bee?characterEncoding=UTF-8");
+			dataSource2.setUrl("jdbc:mysql://localhost:3306/bee?characterEncoding=UTF-8&amp;useSSL=false");
 			dataSource2.setUsername("root");
-			dataSource2.setPassword("");
+			dataSource2.setPassword("123456");
 			dataSource2.init();
 
 			DruidDataSource dataSource3;
 			dataSource3 = new DruidDataSource();
-			dataSource3.setUrl("jdbc:mysql://localhost:3306/bee?characterEncoding=UTF-8");
+			dataSource3.setUrl("jdbc:mysql://localhost:3306/bee?characterEncoding=UTF-8&amp;useSSL=false");
 			dataSource3.setUsername("root");
 			dataSource3.setPassword("");
 			dataSource3.init();
@@ -117,7 +117,7 @@ public class RwDsExam {
 		leafAlloc.setBizTag("bee");
 		Condition condition = new ConditionImpl();
 		condition.setAdd("maxId", "step");
-		int num = suidRich.update(leafAlloc, "maxId", condition);
+		int num = suidRich.update(leafAlloc, condition, "maxId");
 		Logger.info("---------------------------------update num is :" + num);
 
 		//"SELECT biz_tag, max_id, step FROM leaf_alloc WHERE biz_tag = #{tag}"

@@ -78,7 +78,7 @@ public class RwDsTest {
 		leafAlloc.setBizTag("bee");
 		Condition condition = new ConditionImpl();
 		condition.setAdd("maxId", "step");
-		int num = suidRich.update(leafAlloc, "maxId", condition);
+		int num = suidRich.update(leafAlloc, condition, "maxId");
 		Logger.info("---------------------------------update num is :" + num);
 
 		LeafAlloc result = suidRich.selectOne(leafAlloc);
