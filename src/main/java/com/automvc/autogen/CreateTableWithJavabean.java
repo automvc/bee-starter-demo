@@ -30,6 +30,8 @@ public class CreateTableWithJavabean {
             //run the main method directly, the config info get from bee.properties.
 			Ddl.createTable(new Orderhistory(), false); 
 			
+			Ddl.createTable(Orderhistory.class, false); //创建表,若是原来有表,则不覆盖
+			
 			//test data
 			Orderhistory entity=new Orderhistory();
 			entity.setName("Bee");

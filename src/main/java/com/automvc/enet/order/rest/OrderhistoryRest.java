@@ -8,11 +8,14 @@ package com.automvc.enet.order.rest;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.teasoft.bee.osql.BeeSQLException;
+import org.teasoft.bee.osql.service.ObjSQLRichService;
 import org.teasoft.beex.osql.SuidRichExt;
 import org.teasoft.honey.osql.core.Logger;
 
@@ -31,11 +34,11 @@ public class OrderhistoryRest {
 //	@Autowired
 //	ObjSQLService objSQLService;
 
-//	@Autowired
-//	ObjSQLRichService objSQLRichService;  //会生成两个对象,导致setDataSourceName("ds0")设置的,与获取的,不是一个对象.
+	@Autowired
+	ObjSQLRichService objSQLRichService;  //会生成两个对象,导致setDataSourceName("ds0")设置的,与获取的,不是一个对象.
 	
 	
-	//Mongodb使用
+//	Mongodb使用
 //	@Resource(name = "mongodbObjSQLRichService")
 //	ObjSQLRichService objSQLRichService;
 	
@@ -56,23 +59,18 @@ public class OrderhistoryRest {
 //	SuidRich suidRich; // 可以
 	
 	
-	@Autowired
-	SuidRichExt suidRichExt; // 可以
+//	@Autowired
+//	SuidRichExt suidRichExt; // 可以
 
 	@RequestMapping("/list")
-	public Result list(Orderhistory orderhistory, @RequestParam(value = "page", defaultValue = "1", required = false) int page,
+	public Result list(Orderhistory orderhistory, 
+			@RequestParam(value = "page", defaultValue = "1", required = false) int page,
 			@RequestParam(value = "rows", defaultValue = "20", required = false) int rows) {
 		Result result = new Result();
 		try {
-			
-//			HoneyConfig.getHoneyConfig().refreshDataSourceMap();
-			
-			suidRichExt.setDataSourceName("ds0");
-			
-			
-			int total = suidRichExt.count(orderhistory);
-			List<Orderhistory> list = suidRichExt.select(orderhistory, (page - 1) * rows, rows);
-//			List<Orderhistory> list = suidRichExt.select(orderhistory, Orderhistory::getName,Orderhistory::getRemark);
+			objSQLRichService.setDataSourceName("ds0");
+			int total = objSQLRichService.count(orderhistory);
+			List<Orderhistory> list = objSQLRichService.select(orderhistory, (page - 1) * rows, rows);
 			result.setRows(list);
 			result.setTotal(total);
 		} catch (BeeSQLException e) {

@@ -62,6 +62,7 @@ public class RwDsTest {
 			HoneyConfig.getHoneyConfig().multiDS_defalutDS = null;
 			HoneyConfig.getHoneyConfig().multiDS_writeDB = null;
 			HoneyConfig.getHoneyConfig().multiDS_readDB = null;
+			BeeFactory.getInstance().setDataSource(null);
 			BeeFactory.getInstance().setDataSourceMap(null);
 			HoneyContext.setConfigRefresh(true);
 //		}
