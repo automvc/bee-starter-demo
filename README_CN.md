@@ -10,7 +10,7 @@ Bee功能强大：复杂查询也支持向对象方式，分页查询性能更�
 **如果说Mybatis在Hibernate之后不是重复造轮子,那Bee在Hibernate和Mybatis之后也不会是重复造轮子!**  
 择其优点，避其缺点，此外，还加有自己的优点！   
 
-Bee最新版本: V1.9 (2021-04)  
+Bee最新版本: V2.1 (2023-05)  
 **Bee** 网址:  
 https://github.com/automvc/bee  
 或者:  
