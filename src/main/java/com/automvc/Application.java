@@ -14,20 +14,21 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  * @author Kingstar
  * @since  2.1
  */
-//@SpringBootApplication
-//public class Application extends SpringBootServletInitializer {
 //默认只使用单数据源; 所以用多个数据源时,要关闭         如何在java代码中关闭???
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+//@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+//#或者,在application.properties里添加:
+//spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+@SpringBootApplication
 public class Application {
+	
+	public static void main(String[] args) throws Exception {
+		SpringApplication.run(Application.class, args);
+	}
 	
 //	@Override
 //	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 //		return application.sources(Application.class);
 //	}
-
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
-	}
 	
 //	@Bean
 //	public WebMvcConfigurer corsConfigurer() {

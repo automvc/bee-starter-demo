@@ -8,20 +8,16 @@ package com.automvc.enet.order.rest;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.teasoft.bee.mvc.Result;
+import org.teasoft.bee.mvc.service.ObjSQLRichService;
 import org.teasoft.bee.osql.BeeSQLException;
-import org.teasoft.bee.osql.service.ObjSQLRichService;
-import org.teasoft.beex.osql.SuidRichExt;
 import org.teasoft.honey.osql.core.Logger;
 
-import com.automvc.common.jquery.Result;
 import com.automvc.enet.order.entity.Orderhistory;
-import com.automvc.moreds.RwDsTest;
 
 /**
  * @author AiTeaSoft.com
@@ -65,12 +61,12 @@ public class OrderhistoryRest {
 	@RequestMapping("/list")
 	public Result list(Orderhistory orderhistory, 
 			@RequestParam(value = "page", defaultValue = "1", required = false) int page,
-			@RequestParam(value = "rows", defaultValue = "20", required = false) int rows) {
+			@RequestParam(value = "size", defaultValue = "20", required = false) int size) {
 		Result result = new Result();
 		try {
 			objSQLRichService.setDataSourceName("ds0");
 			int total = objSQLRichService.count(orderhistory);
-			List<Orderhistory> list = objSQLRichService.select(orderhistory, (page - 1) * rows, rows);
+			List<Orderhistory> list = objSQLRichService.select(orderhistory, (page - 1) * size, size);
 			result.setRows(list);
 			result.setTotal(total);
 		} catch (BeeSQLException e) {
@@ -84,13 +80,13 @@ public class OrderhistoryRest {
 		return result;
 	}
 
-	@RequestMapping("/testMoreDatasource")
-	public Result testMoreDatasource() {
-		Result result = new Result();
-		RwDsTest.testMoreDatasource();
-		result.setMsg("testMoreDatasource");
-		return result;
-	}
+//	@RequestMapping("/testMoreDatasource")
+//	public Result testMoreDatasource() {
+//		Result result = new Result();
+//		RwDsTest.testMoreDatasource();
+//		result.setMsg("testMoreDatasource");
+//		return result;
+//	}
 
 //	@RequestMapping("/add")
 //	public Result insert(Orderhistory orderhistory) {

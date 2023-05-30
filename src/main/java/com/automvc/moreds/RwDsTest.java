@@ -6,9 +6,9 @@
 
 package com.automvc.moreds;
 
-import org.teasoft.bee.osql.Condition;
 import org.teasoft.bee.osql.DatabaseConst;
-import org.teasoft.bee.osql.SuidRich;
+import org.teasoft.bee.osql.api.Condition;
+import org.teasoft.bee.osql.api.SuidRich;
 import org.teasoft.bee.osql.transaction.Transaction;
 import org.teasoft.honey.osql.core.BeeFactory;
 import org.teasoft.honey.osql.core.BeeFactoryHelper;
