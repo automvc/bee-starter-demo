@@ -27,11 +27,11 @@ https://gitee.com/automvc/bee
 ### 用Bee+Spring Boot,十多分钟就可实现一个历史订单管理功能(后端)。  
 ## 1 数据库准备 
 *  1).创建数据库,配置数据库信息; 
-*  2).创建表,可以利用CreateTableWithJavabean.java根据Javabean来创建表. 
-*  3).如果配置数据源,可在application.properties配置. 
-可参考application.properties里的: 
-############################### 配置单个数据源 ########### 
-############################### 配置多数据源 ########### 	
+*  2).创建表,可以利用CreateTableWithJavabean.java根据Javabean来创建表.  
+*  3).如果配置数据源,可在application.properties配置.  
+可参考application.properties里的:  
+############################### 配置单个数据源 ###########  
+############################### 配置多数据源 ###########  
 
 ## 2. 编译工程并启动Application  
 ## 3. 访问url:  
