@@ -11,7 +11,7 @@ This project is demo for this.
 
 **Bee** is an easy and high efficiency ORM framework.   
 
-Latest Version: Bee V1.9 (2021-04)  
+Latest Version: Bee V2.1 (2023-05)  
 **Bee** see:  
 https://github.com/automvc/bee  
 or:  
