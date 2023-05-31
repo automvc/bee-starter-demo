@@ -30,7 +30,7 @@ https://gitee.com/automvc/bee
 *  2).创建表,可以利用CreateTableWithJavabean.java根据Javabean来创建表. 
 *  3).如果配置数据源,可在application.properties配置. 
 可参考application.properties里的: 
-############################### 配置单个数据源 ########### 	
+############################### 配置单个数据源 ########### 
 ############################### 配置多数据源 ########### 	
 
 ## 2. 编译工程并启动Application  
