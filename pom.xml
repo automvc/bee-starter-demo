@@ -14,7 +14,7 @@
 <!--             <version>1.9.8</version> -->
 <!--               <version>1.11</version> -->
 <!--               <version>2.1</version> -->
-              <version>2.1</version>
+              <version>2.1.7</version>
 	</parent>
 	
 	<properties>
@@ -28,9 +28,8 @@
 <!-- 		<spring.version>1.5.16.RELEASE</spring.version> -->
 <!-- 		<spring.version>2.0.4.RELEASE</spring.version> -->
 <!-- 		<spring.version>2.4.2</spring.version> -->
-
 <!--            <spring.version>2.5.6</spring.version> -->
-<!--            <spring.version>2.7.3</spring.version> -->
+<!--            <spring.version>2.7.3</spring.version> 不用了-->
             <spring.version>2.7.12</spring.version>
 	</properties>
 
