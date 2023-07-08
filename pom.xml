@@ -78,6 +78,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>${spring.version}</version>
+<!-- 			整合spring boot3.0.8, 有log4j报错时,需要在这排除它 -->
 		</dependency>
 
 		<!-- if in spring-boot use datasoure,need this dependency -->
