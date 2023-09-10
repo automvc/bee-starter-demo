@@ -8,7 +8,7 @@ package com.automvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+//import org.teasoft.honey.osql.type.SetParaTypeConverterRegistry;
 
 /**
  * @author Kingstar
@@ -23,6 +23,12 @@ public class Application {
 	
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(Application.class, args);
+		
+		//2.1要用
+//		System.out.println("-----------------in--Application-----before-----");
+//		SetParaTypeConverterRegistry.register(java.util.Date.class, null);
+//		System.out.println("-----------------in--Application-----after-----");
+		
 	}
 	
 //	@Override
