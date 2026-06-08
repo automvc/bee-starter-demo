@@ -8,9 +8,9 @@ package com.automvc.autogen;
 
 import org.teasoft.bee.osql.api.Suid;
 import org.teasoft.honey.distribution.GenIdFactory;
+import org.teasoft.honey.logging.Logger;
 import org.teasoft.honey.osql.autogen.Ddl;
 import org.teasoft.honey.osql.core.BeeFactoryHelper;
-import org.teasoft.honey.osql.core.Logger;
 
 import com.automvc.enet.order.entity.Orderhistory;
 
@@ -28,7 +28,7 @@ public class CreateTableWithJavabean {
 			
 			//直接运行main方法, 配置信息是从bee.properties获取 
             //run the main method directly, the config info get from bee.properties.
-			Ddl.createTable(new Orderhistory(), false); 
+//			Ddl.createTable(new Orderhistory(), false); 
 			
 			Ddl.createTable(Orderhistory.class, false); //创建表,若是原来有表,则不覆盖
 			

@@ -10,12 +10,12 @@ import org.teasoft.bee.osql.DatabaseConst;
 import org.teasoft.bee.osql.api.Condition;
 import org.teasoft.bee.osql.api.SuidRich;
 import org.teasoft.bee.osql.transaction.Transaction;
+import org.teasoft.honey.logging.Logger;
 import org.teasoft.honey.osql.core.BeeFactory;
 import org.teasoft.honey.osql.core.BeeFactoryHelper;
 import org.teasoft.honey.osql.core.ConditionImpl;
 import org.teasoft.honey.osql.core.HoneyConfig;
 import org.teasoft.honey.osql.core.HoneyContext;
-import org.teasoft.honey.osql.core.Logger;
 import org.teasoft.honey.osql.core.SessionFactory;
 
 /**
@@ -49,6 +49,7 @@ public class RwDsTest {
 	    
 		HoneyConfig.getHoneyConfig().setDbName(DatabaseConst.MYSQL);
 		HoneyConfig.getHoneyConfig().naming_translateType=1;
+//		HoneyContext.resetAferSetDbName();//2.5.2
 //		if (isMysql()) initDS();
 		
 //		if (isMysql()) {
@@ -68,6 +69,7 @@ public class RwDsTest {
 //		}
 		HoneyConfig.getHoneyConfig().setDbName(oldDbName);
 		HoneyConfig.getHoneyConfig().naming_translateType=oldTranslateTyp;
+//		HoneyContext.resetAferSetDbName();//2.5.2
 		HoneyContext.setConfigRefresh(true);
 		
 	}
